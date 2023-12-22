@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-# displaying  10 times
-# but for the 9th iteration, displays Best School and then Hi on a new line.
+# displaying Best School 10 times
 i="0"
 while [ $i -lt 10 ]
 do
-echo "Best School"
+echo "Hi"
 if [ $i -eq 8 ]
-then echo "Hi"
+then echo "Best School"
 fi
 i=$((i+1))
-donei
+done
