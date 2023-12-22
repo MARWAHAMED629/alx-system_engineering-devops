@@ -3,9 +3,9 @@
 i="0"
 while [ $i -lt 10 ]
 do
-echo "Hi"
+echo "Best School"
 if [ $i -eq 8 ]
-then echo "Best School"
+then echo "Hi"
 fi
 i=$((i+1))
 done
