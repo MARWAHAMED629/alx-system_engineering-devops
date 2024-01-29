@@ -1,6 +1,6 @@
 # Secured and Monitored Web Infrastructure
 
-https://raw.githubusercontent.com/MARWAHAMED629/alx-system_engineering-devops/master/0x09-web_infrastructure_design/2-secured_and_monitored_web_infrastructure.PNG
+![Q2](https://github.com/MARWAHAMED629/alx-system_engineering-devops/assets/59849322/a5bf6aed-ed6f-4ffa-a34e-fbc8d2f584e7)
 
 ## Description
 

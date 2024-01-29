@@ -1,7 +1,7 @@
 # Distributed Web Infrastructure
 
 
-https://raw.githubusercontent.com/MARWAHAMED629/alx-system_engineering-devops/master/0x09-web_infrastructure_design/1-distributed_web_infrastructure.PNG
+![1-distributed_web_infrastructure](https://github.com/MARWAHAMED629/alx-system_engineering-devops/assets/59849322/343cca3f-b0f1-4897-b0e1-62a4f9def00d)
 
 ## Description
 

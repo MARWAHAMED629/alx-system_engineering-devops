@@ -1,6 +1,7 @@
 # Scaled Up Web Infrastructure
 
-https://raw.githubusercontent.com/MARWAHAMED629/alx-system_engineering-devops/master/0x09-web_infrastructure_design/3-scale_up.png
+
+![Screenshot (152)](https://github.com/MARWAHAMED629/alx-system_engineering-devops/assets/59849322/97f4085b-0b8f-4718-9199-fe5f51a2aa98)
 
 ## Description
 
