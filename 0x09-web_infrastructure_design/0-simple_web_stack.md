@@ -1,6 +1,7 @@
 
 # Simple Web Stack
-https://raw.githubusercontent.com/MARWAHAMED629/alx-system_engineering-devops/master/0x09-web_infrastructure_design/0-simple_web_stack.PNG
+
+![Simple Stack](https://github.com/MARWAHAMED629/alx-system_engineering-devops/assets/59849322/f4613127-8a30-4c33-9425-5c0fd3f262b1)
 
 ## Description
 
