@@ -1,18 +1,5 @@
-# Install flask package version 2.1.0 with pip3
+# install puppet-lint -v 2.5.0
 
-class { 'python::pip': }
-
-package { 'Flask':
-  ensure => 'latest',
-  provider => 'pipx',
-  install_options => [ '--index-url https://pypi.org/simple' ], # Optional: Use PyPI index
-  require => Class['python::pip']
-}
-
-# Ensure flask version is 2.1.0
-exec { 'check_flask_version':
-  command => 'pip3 show flask | grep Version | cut -d" " -f2',
-  unless => '/usr/bin/pip3 show flask | grep Version | grep "2.1.0"',
-  notify => Package['Flask'],
-  failonerror => true
+exec { 'puppet-lint':
+  command => '/usr/bin/apt-get -y install puppet-lint -v 2.5.0',
 }
