@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
-# comment
+#  A Script that configures a new Ubuntu machine to Perform a 301-redirection
 
-config_file="/etc/nginx/sites-available/default"
-temp_file=$(mktemp)
+# Upadating Packages before Installations
+sudo apt-get update
+sudo apt-get install -y nginx
 
-# Use awk to insert the new location block after the line containing 'server {'
-awk '/server {/ { print; print "    location /redirect_me {"; print "        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;"; next }1' "$config_file" > "$temp_file"
+# Creating an index.html page
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
-# Replace the original configuration file with the modified one
-sudo mv "$temp_file" "$config_file"
+# Performing a 301 Redirection
+string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/besthor permanent;"
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+# Restarting Nginx service
+sudo service nginx restart
