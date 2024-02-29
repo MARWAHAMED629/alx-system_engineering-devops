@@ -1,4 +1,4 @@
-# Automating project requirements using Puppet
+# Automating project requirements using the Puppet
 
 package { 'nginx':
   ensure => installed,
@@ -18,3 +18,4 @@ file { '/var/www/html/index.html':
 service { 'nginx':
   ensure  => running,
   require => Package['nginx'],
+}
