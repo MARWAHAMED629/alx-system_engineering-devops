@@ -1,4 +1,5 @@
 # 0x16. API advanced
+![landing_api_banner](https://github.com/MARWAHAMED629/alx-system_engineering-devops/assets/59849322/53611cd0-6fb3-4102-8691-14ab911cd4f9)
 
 ## How to read API documentation to find the endpoints you’re looking for
 
@@ -22,6 +23,7 @@ JSON (JavaScript Object Notation) is a common format used for data interchange i
 - Use built-in or third-party libraries depending on your programming language (e.g., `json` module in Python).
 - Deserialize the JSON data received from the API response into native data structures (e.g., dictionaries, lists) that your programming language can work with.
 - Access the parsed data elements using appropriate keys or indices.
+![WIxXad8](https://github.com/MARWAHAMED629/alx-system_engineering-devops/assets/59849322/fa297f12-1cb2-4a8b-a543-819fc38295f0)
 
 ## How to make a recursive API call
 
