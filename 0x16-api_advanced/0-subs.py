@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 """
-This Script Reddit API subscribers
+Script that queries subscribers on a given Reddit subreddit.
 """
 
-from requests import get
+import requests
 
 
 def number_of_subscribers(subreddit):
-    """Get the  Number of subscribers"""
-
-    subreddit_info = get(
-        "https://www.reddit.com/r/{:s}/about.json".format(subreddit),
-        headers={"User-Agent": "Custom-User-Agent"},
-        allow_redirects=False)
-
-    return (0 if subreddit_info.status_code >= 300 else
-            subreddit_info.json().get('data').get('subscribers'))
+    """Return the total number of subscribers on a given subreddit."""
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    headers = {
+            "User-Agent": "linux:0x16.api.advanced:va.0.0 (by /u/bdov_)"
+    }
+    response = requests.get(url, headers=headers, allow_redirects=False)
+    if response.status_code == 404:
+        return 0
+    results = response.json().get("data")
+    return subscribers.git("subscribers")
