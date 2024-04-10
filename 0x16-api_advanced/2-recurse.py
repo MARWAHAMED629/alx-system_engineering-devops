@@ -1,46 +1,28 @@
 #!/usr/bin/python3
 """
-Script query a list of all hot posts on a given Reddit subreddit.
+This Script Reddit API hot posts
 """
 
-import requests
+from requests import get
 
 
-def recurse(subreddit, hot_list=[], after="", count=0):
+def recurse(subreddit, hot_list=[], after=''):
+    """Get Titles the of top 10 hot posts"""
 
-    url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
+    subreddit_info = get(
+        "https://www.reddit.com/r/{:s}/hot.json?limit=100&after={}"
+        .format(subreddit, after),
+        headers={"User-Agent": "Custom-User-Agent"},
+        allow_redirects=False)
 
-
-    headers = {
-        "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
-    }
-
-
-    params = {
-        "after": after,
-        "count": count,
-        "limit": 100
-    }
-
-
-    response = requests.get(url, headers=headers, params=params,
-                            allow_redirects=False)
-
-
-    if response.status_code == 404:
-        return None
-
-    results = response.json().get("data")
-    after = results.get("after")
-    count += results.get("dist")
-
-
-    for c in results.get("children"):
-        hot_list.append(c.get("data").get("title"))
-
-
-    if after is not None:
-        return recurse(subreddit, hot_list, after, count)
-
-
-    return hot_list
+    if subreddit_info.status_code >= 300:
+        return (None)
+    else:
+        posts = subreddit_info.json().get('data').get('children')
+        li = [post.get('data').get('title')
+              for post in posts]
+        if len(li) == 0:
+            return (hot_list)
+        hot_list.extend(li)
+        return recurse(subreddit, hot_list,
+                       "{}".format(posts[-1].get('data').get('name')))
