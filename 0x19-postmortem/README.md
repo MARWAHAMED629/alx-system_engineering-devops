@@ -1,3 +1,6 @@
+
+![DevOps](https://github.com/MARWAHAMED629/alx-system_engineering-devops/assets/59849322/3ce83095-64dd-4e71-9fa9-81ce445a4aa9)
+
 # Postmortem: Learning from Failure
 
 ## Introduction:
@@ -9,6 +12,10 @@ In the world of software engineering, failure is inevitable. Whether it's due to
 - **Duration of Outage:** The outage occurred on April 5th, 2024, from 09:00 to 11:30 UTC.
 - **Impact:** The outage affected the availability of our primary web application, resulting in service unavailability for all users. Users experienced slow response times and intermittent errors during the outage period.
 - **Root Cause:** The root cause of the outage was identified as a misconfiguration in the application server's firewall settings, leading to blocked incoming traffic.
+
+
+![pQ9YzVY](https://github.com/MARWAHAMED629/alx-system_engineering-devops/assets/59849322/7c3bc341-1180-4ad8-97d9-e9b3d2f94f32)
+
 
 ## Timeline:
 
